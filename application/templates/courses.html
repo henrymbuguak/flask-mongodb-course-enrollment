@@ -20,14 +20,14 @@
             <!-- Construct the rest of courses here -->
             {% for course in courseData %}
             <tr>
-                <td scope="row">{{ course["courseID"] }}</td>
+                <td scope="row">{{ course["course_id"] }}</td>
                 <td>{{ course["title"] }}</td>
                 <td>{{ course["description"] }}</td>
                 <td>{{ course["credits"] }}</td>
                 <td>{{ course["term"] }}</td>
                 <td>
                     <form action="{{url_for('enrollment')}}" method="POST">
-                        <input type="hidden" name="courseID" value="{{ course["courseID"] }}">
+                        <input type="hidden" name="course_id" value="{{ course["course_id"] }}">
                         <input type="hidden" name="title" value="{{ course["title"] }}">
                         <input type="hidden" name="term" value="{{ course["term"] }}">
                         <button>Enroll</button>
