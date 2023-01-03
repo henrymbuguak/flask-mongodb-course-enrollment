@@ -98,3 +98,11 @@ footer {
 .error-message{
     color: red;
 }
+
+.user {
+    float: right;
+    position: absolute;
+    font-size: 25px;
+    right: 10em;
+    top: 2em;
+}

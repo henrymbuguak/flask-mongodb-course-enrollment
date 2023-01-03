@@ -16,6 +16,12 @@
 
     {% with messages = get_flashed_messages(with_categories=true) %}
 
+    {% if session['username'] %}
+
+    <span class="user">Welcome, {{ session.get('username') }}</span>
+
+    {% endif %}
+
         {% if messages %}
             {% for category, message in messages %}
 
